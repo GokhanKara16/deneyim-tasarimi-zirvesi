@@ -103,6 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const heroSlides = document.querySelectorAll('.hero-bg-slide');
   if (heroSlides.length > 1) {
+    const loadDeferredSlides = () => {
+      heroSlides.forEach((slide) => {
+        const bg = slide.getAttribute('data-bg');
+        if (bg) {
+          slide.style.backgroundImage = `url('${bg}')`;
+          slide.removeAttribute('data-bg');
+        }
+      });
+    };
+
+    if (document.readyState === 'complete') {
+      loadDeferredSlides();
+    } else {
+      window.addEventListener('load', loadDeferredSlides);
+    }
+
     let currentSlide = 0;
     setInterval(() => {
       heroSlides[currentSlide].classList.remove('is-active');
