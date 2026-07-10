@@ -485,7 +485,7 @@ a { color: inherit; text-decoration: none; }
 .speaker-card-featured {
   display: flex;
   flex-direction: column;
-  padding: 0 0 20px;
+  padding: 0 0 16px;
   overflow: hidden;
   border-color: var(--ink);
   transition: box-shadow 0.15s ease;
@@ -532,6 +532,7 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 .speaker-card h3 { font-size: 16px; margin-bottom: 2px; }
 .speaker-card p { margin: 0; color: var(--ink-soft); font-size: 14px; }
@@ -637,14 +638,25 @@ a { color: inherit; text-decoration: none; }
   gap: 20px;
 }
 .sponsor-slot {
-  padding: 32px 16px;
+  height: 150px;
   border-radius: var(--radius);
   border: 1px dashed rgba(255,255,255,0.2);
   background: rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sponsor-slot span {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
   color: rgba(255,255,255,0.5);
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
 }
 .sponsor-divider {
   margin: 56px auto;
@@ -655,16 +667,18 @@ a { color: inherit; text-decoration: none; }
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
 }
 .sponsor-badge {
-  padding: 20px 40px;
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.15);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sponsor-badge img {
+  max-height: 150px;
+  width: auto;
+  display: block;
 }
 .sponsor-cta {
   margin-top: 28px;
