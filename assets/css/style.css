@@ -306,12 +306,12 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 16px;
   width: max-content;
-  animation: marquee 113s linear infinite;
+  animation: marquee 127s linear infinite;
 }
 .companies-track:hover { animation-play-state: paused; }
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-5460px); }
+  to { transform: translateX(-6084px); }
 }
 .company-logo {
   flex: none;
