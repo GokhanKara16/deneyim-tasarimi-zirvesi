@@ -899,5 +899,6 @@ a.contact-value:hover { color: var(--ink); }
   .hero-meta-bar { gap: 20px; padding: 20px 24px; }
   .hero-meta-divider { display: none; }
   .speaker-grid { grid-template-columns: 1fr; }
+  .speaker-card-featured .speaker-avatar { aspect-ratio: 4 / 3; }
   .sponsor-grid { grid-template-columns: 1fr; }
 }
